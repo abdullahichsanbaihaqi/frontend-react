@@ -18,8 +18,7 @@ export const logout = async () => {
   } catch (err) {
     console.error("Logout error:", err);
   } finally {
-    localStorage.removeItem("token");
-    localStorage.removeItem("displayName");
+    localStorage.clear()
 
     window.location.href = "/login";
   }

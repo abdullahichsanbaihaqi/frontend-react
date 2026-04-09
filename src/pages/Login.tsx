@@ -28,6 +28,7 @@ export default function Login() {
 
       localStorage.setItem("token", res.data.data.token);
       localStorage.setItem("displayName", res.data.data.displayName);
+      localStorage.setItem("refreshToken", res.data.data.refreshToken);
       navigate("/products");
     } catch (err: any) {
       setError(err?.response?.data?.message || "Login gagal");

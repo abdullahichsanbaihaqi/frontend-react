@@ -5,7 +5,7 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
-} from "../api/product.api";
+} from "../services/product.api";
 
 type ProductType = {
   id: number;
