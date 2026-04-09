@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-
+import { logout } from "../utils/auth";
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen">
@@ -22,10 +22,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             {/* LOGOUT */}
             <button
               className="bg-red-500 hover:bg-red-600 px-3 py-1 rounded"
-              onClick={() => {
-                localStorage.removeItem("token");
-                window.location.href = "/login";
-              }}
+              onClick={logout}
             >
               Logout
             </button>
